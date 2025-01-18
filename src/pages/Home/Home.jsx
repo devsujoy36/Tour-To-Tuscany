@@ -1,9 +1,8 @@
+import { Helmet } from "react-helmet-async"
 import BikeBusRental from "../../components/BikeBusRental/BikeBusRental"
 import BookNewBike from "../../components/BookNewBike/BookNewBike"
 import ExplorePopularDestinations from "../../components/ExplorePopularDestinations/ExplorePopularDestinations"
-import Footer from "../../components/Footer/Footer"
 import GetSpecialOffer from "../../components/GetSpecialOffer/GetSpecialOffer"
-import Header from "../../components/Header/Header"
 import Hero from "../../components/Hero/Hero"
 import MostPopularPackages from "../../components/MostPopularPackages/MostPopularPackages"
 import WelcomeToOurSite from "../../components/WelcomeToOurSite/WelcomeToOurSite"
@@ -11,15 +10,16 @@ import WelcomeToOurSite from "../../components/WelcomeToOurSite/WelcomeToOurSite
 const Home = () => {
   return (
     <div className="">
-        <Header/>
-        <Hero/>
-        <ExplorePopularDestinations/>
-        <WelcomeToOurSite/>
-        <GetSpecialOffer/>
-        <BikeBusRental/>
-        <BookNewBike/>
-        <MostPopularPackages/>
-        <Footer/>
+      <Helmet>
+        <title>TOURS TO TUSCANY | HOME</title>
+      </Helmet>
+      <Hero />
+      <ExplorePopularDestinations />
+      <WelcomeToOurSite />
+      <GetSpecialOffer />
+      <BikeBusRental />
+      <BookNewBike />
+      <MostPopularPackages />
     </div>
   )
 }

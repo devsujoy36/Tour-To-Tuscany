@@ -7,32 +7,32 @@ const Footer = () => {
     <div className="bg-[#333333] text-white ">
       <div className="max-w-screen-2xl lg:mx-auto mx-10 pt-10 ">
         <div>
-          <img src="https://i.ibb.co.com/dQ3twTX/navlogo.png" alt="" />
+          <img className="my-b" src="https://i.ibb.co.com/dQ3twTX/navlogo.png" alt="" />
           
-          <div id="footer-links" className="grid grid-cols-1 lg:grid-cols-5 gap-10 py-5">
+          <div id="footer-links" className="grid grid-cols-1 lg:grid-cols-5 gap-10 py-5 border-gray-500 border-t border-b">
 
             <div className="flex flex-col gap-2">
               <h1 className="text-xl font-semibold mb-2">Services</h1>
-              <a href="">Bike and Rickshaw rental</a>
-              <a href="">Guided Tours of Lucca</a>
-              <a href="">Guided Bike Tour of Lucca</a>
-              <a href="">Trip In The Tuscan Hills</a>
-              <a href="">Transportation With Luxury Cars</a>
-              <a href="">Transportation With Luxury Cars</a>
-              <a href="">Wine Tours By Bus With Guide</a>
+              <a href="#">Bike and Rickshaw rental</a>
+              <a href="#">Guided Tours of Lucca</a>
+              <a href="#">Guided Bike Tour of Lucca</a>
+              <a href="#">Trip In The Tuscan Hills</a>
+              <a href="#">Transportation With Luxury Cars</a>
+              <a href="#">Transportation With Luxury Cars</a>
+              <a href="#">Wine Tours By Bus With Guide</a>
             </div>
 
             <div className="flex flex-col gap-2">
               <h1 className="text-xl font-semibold mb-2">Home</h1>
-              <a href="">Home</a>
-              <a href="">About Us</a>
-              <a href="">Tour Package</a>
+              <a href="/">Home</a>
+              <a href="/aboutus">About Us</a>
+              <a href="/tourpackages">Tour Package</a>
             </div>
 
             <div className="flex flex-col gap-2">
               <h1 className="text-xl font-semibold mb-2">Help</h1>
-              <a href="">Term of Use</a>
-              <a href="">Provicy Policy</a>
+              <a href="#">Term of Use</a>
+              <a href="#">Provicy Policy</a>
             </div>
 
             <div className="flex flex-col justify-start items-start gap-2">
@@ -54,7 +54,7 @@ const Footer = () => {
             <div className="f">
               <h1 className="text-xl font-semibold mb-2 ml-3">Social Media</h1>
               <div className="flex items-center gap-2">
-                <a href=""><img className="w-11" src="https://i.ibb.co.com/Y2tJKKf/twiter.png" alt="" /></a>
+                <a href="#"><img className="w-11" src="https://i.ibb.co.com/Y2tJKKf/twiter.png" alt="" /></a>
                 <a href="https://www.facebook.com/sujoydas36"><img className="w-10" src="https://i.ibb.co.com/FXY8Vhg/facebook.png" alt="" /></a>
                 <a href="https://www.instagram.com/sdsujoy920243/"><img className="w-11" src="https://i.ibb.co.com/Tkv2nq7/insta.png" alt="" /></a>
               </div>
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className=" border-gray-500 border-t py-5">
+        <div className="  py-5">
           <h1 className="text-center">Copyright © 2022.  All rights reserved. </h1>
         </div>
       </div>

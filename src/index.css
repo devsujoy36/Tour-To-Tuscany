@@ -13,7 +13,8 @@
   font-style: normal;
 }
 .active {
-  background-color:  #fa8b02;
+  background-color:  #ff8c00;
+  color: white;
 }
 
 #footer-links  a:hover{
