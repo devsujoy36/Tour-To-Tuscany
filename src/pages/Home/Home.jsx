@@ -9,7 +9,7 @@ import WelcomeToOurSite from "../../components/WelcomeToOurSite/WelcomeToOurSite
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
         <Header/>
         <Hero/>
         <ExplorePopularDestinations/>
