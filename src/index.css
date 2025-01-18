@@ -13,6 +13,9 @@
   font-style: normal;
 }
 .active {
-  border-bottom: 2px solid #fa8b02;
-  color: #fa8b02;
+  background-color:  #fa8b02;
+}
+
+#footer-links  a:hover{
+  text-decoration: underline;
 }

@@ -2,7 +2,8 @@
   {
     "id": "lucca_bike-tour",
     "name": "Lucca Bike Tour",
-    "price": "$50",
+    "price": "$34",
+    "day": "EVERY DAY",
     "description": "Discover the charming city of Lucca on a guided bike tour. This tour lets you explore scenic routes, historic landmarks, and the authentic Italian culture. Pedal through the city’s streets, learn its history, and experience its beauty in a few enjoyable hours.",
     "img": "https://i.ibb.co.com/hymHJR9/luccabiketour1.png",
     "imgGallery": [
@@ -33,7 +34,8 @@
   {
     "id": "cinque_terre-tour",
     "name": "Cinque Terre Tour",
-    "price": "$60",
+    "price": "$24",
+    "day": "MONDAY",
     "description": "Explore the stunning Cinque Terre on a guided tour that takes you through its colorful villages, rugged coastlines, and terraced hillsides. Enjoy breathtaking views, local culture, and scenic paths as you discover the beauty of one of Italy's most iconic regions.",
     "img": "https://i.ibb.co.com/wh5Z3QP/cinqueterretour1.png",
     "imgGallery": [
@@ -64,7 +66,8 @@
   {
     "id": "siena-and-surroundings",
     "name": "Siena and Surroundings",
-    "price": "$60",
+    "price": "$42",
+    "day": "TO BE DECIDED",
     "description": "Visit the beautiful medieval city of Siena and its picturesque surroundings on this guided bike tour. Explore its iconic landmarks, stunning countryside, and learn about the local history and culture while cycling through breathtaking landscapes.",
     "img": "https://i.ibb.co.com/PFPgbnB/sienaandsurroundings1.png",
     "imgGallery": [
@@ -95,7 +98,8 @@
   {
     "id": "tour-of-the-lucca-hills",
     "name": "Tour of the Lucca Hills",
-    "price": "$60",
+    "price": "$23",
+    "day": "SUNDAY",
     "description": "Experience the scenic beauty of the Lucca Hills on this guided bike tour. Ride through picturesque vineyards, olive groves, and charming villages while enjoying panoramic views of the surrounding Tuscan landscape. It’s a peaceful yet invigorating adventure.",
     "img": "https://i.ibb.co.com/2PsHhWL/touroftheluccahills1.png",
     "imgGallery": [
@@ -126,13 +130,14 @@
   {
     "id": "Gardaland-Verona",
     "name": "Gardaland, Verona",
-    "price": "$60",
+    "price": "$35",
+    "day": "SUNDAY",
     "description": "Discover the magical world of Gardaland and explore the historic city of Verona, known for its Shakespearean ties. This guided tour offers a mix of thrilling amusement park experiences and cultural exploration of the romantic city of Verona.",
-    "img": "https://i.ibb.co.com/wh5Z3QP/cinqueterretour1.png",
+    "img": "https://i.ibb.co.com/d005dxP/luccabiketour-Gallary1.png",
     "imgGallery": [
-      "",
-      "",
-      ""
+      "https://i.ibb.co.com/fn7Psyp/touroftheluccahills2.png",
+      "https://i.ibb.co.com/gDnw60L/touroftheluccahills3.png",
+      "https://i.ibb.co.com/CPqtDBy/touroftheluccahills4.png"
     ],
     "details": {
       "detailsDescription": "The Gardaland and Verona Tour blends excitement and culture into one unforgettable experience. Start your adventure at Gardaland, one of Italy’s most famous amusement parks, where you can enjoy thrilling rides and attractions. Then, head to the city of Verona, home to the iconic Juliet’s House and the ancient Arena. Your expert guide will lead you through the rich history of this romantic city, sharing stories of Shakespeare’s “Romeo and Juliet” and the city’s Roman heritage. This tour offers a perfect balance of fun and cultural exploration, making it an excellent choice for families and those looking to experience the best of both worlds.",
@@ -148,10 +153,106 @@
       "entryTransportation": "Bus"
     },
     "gallery": [
-      "https://i.ibb.co.com/d005dxP/luccabiketour-Gallary1.png",
+      "https://i.ibb.co.com/wh5Z3QP/cinqueterretour1.png",
       "https://i.ibb.co.com/FKVyQY2/cinqueterretour-Gallary1.png",
       "https://i.ibb.co.com/tBmLq0m/sienaandsurroundings-Gallary1.png",
       "https://i.ibb.co.com/bXrcw5L/touroftheluccahills-Gallary1.png"
+    ]
+  },
+  {
+    "id": "cinque_terre-tour",
+    "name": "Cinque Terre Tour",
+    "price": "$24",
+    "day": "MONDAY",
+    "description": "Explore the stunning Cinque Terre on a guided tour that takes you through its colorful villages, rugged coastlines, and terraced hillsides. Enjoy breathtaking views, local culture, and scenic paths as you discover the beauty of one of Italy's most iconic regions.",
+    "img": "https://i.ibb.co.com/wh5Z3QP/cinqueterretour1.png",
+    "imgGallery": [
+      "https://i.ibb.co.com/Kr6yzR0/cinqueterretour2.png",
+      "https://i.ibb.co.com/DWyJV4z/cinqueterretour3.png",
+      "https://i.ibb.co.com/G7S8fnr/cinqueterretour4.png"
+    ],
+    "details": {
+      "detailsDescription": "The Cinque Terre Tour offers a captivating journey through one of Italy’s most renowned destinations. This guided tour takes you through the five picturesque fishing villages perched on the Ligurian coast. You’ll enjoy stunning coastal views, walk through charming streets, and experience local culture while learning about the region’s history. The area’s rugged terrain and colorful architecture are sure to take your breath away. With an expert guide leading the way, you'll explore hidden gems and enjoy a deeper understanding of Cinque Terre’s beauty and traditions. This is the perfect way to immerse yourself in the Italian Riviera’s vibrant atmosphere.",
+      "numberOfGroup": "12-30",
+      "duration": "6 hours and 30 minutes",
+      "departuringAndArrivingAreas": "Cinque Terre, La Spezia",
+      "guideService": "Included",
+      "language": [
+        "English",
+        "Italian"
+      ],
+      "entryFees": "$10",
+      "entryTransportation": "Train"
+    },
+    "gallery": [
+      "https://i.ibb.co.com/FKVyQY2/cinqueterretour-Gallary1.png",
+      "https://i.ibb.co.com/4gdRxNZ/cinqueterretour-Gallary2.png",
+      "https://i.ibb.co.com/Ph1mky2/cinqueterretour-Gallary3.png",
+      "https://i.ibb.co.com/6rttL4M/cinqueterretour-Gallary4.png"
+    ]
+  },
+  {
+    "id": "siena-and-surroundings",
+    "name": "Siena and Surroundings",
+    "price": "$42",
+    "day": "TO BE DECIDED",
+    "description": "Visit the beautiful medieval city of Siena and its picturesque surroundings on this guided bike tour. Explore its iconic landmarks, stunning countryside, and learn about the local history and culture while cycling through breathtaking landscapes.",
+    "img": "https://i.ibb.co.com/PFPgbnB/sienaandsurroundings1.png",
+    "imgGallery": [
+      "https://i.ibb.co.com/jW6XvB0/sienaandsurroundings2.png",
+      "https://i.ibb.co.com/0jd4qcN/sienaandsurroundings3.png",
+      "https://i.ibb.co.com/sWLKzb8/sienaandsurroundings4.png"
+    ],
+    "details": {
+      "detailsDescription": "The Siena and Surroundings tour invites you to explore the medieval charm of Siena and its stunning rural surroundings. Known for its world-famous Palio horse race, Siena boasts remarkable historical landmarks, including the magnificent Piazza del Campo. On this guided bike tour, you'll cycle through the city’s ancient streets and surrounding countryside, where olive groves and vineyards dot the landscape. Your expert guide will share insights into the region's history, art, and culture, enhancing the experience. This immersive tour offers a fantastic way to engage with Tuscany’s natural beauty while discovering the treasures of Siena, making it an unforgettable journey for travelers.",
+      "numberOfGroup": "10-20",
+      "duration": "5 hours and 30 minutes",
+      "departuringAndArrivingAreas": "Siena city center",
+      "guideService": "Included",
+      "language": [
+        "English",
+        "Italian"
+      ],
+      "entryFees": "$7",
+      "entryTransportation": "Bus"
+    },
+    "gallery": [
+      "https://i.ibb.co.com/tBmLq0m/sienaandsurroundings-Gallary1.png",
+      "https://i.ibb.co.com/jw0ph6c/sienaandsurroundings-Gallary2.png",
+      "https://i.ibb.co.com/k4hJzhC/sienaandsurroundings-Gallary3.png",
+      "https://i.ibb.co.com/4mZFc0b/sienaandsurroundings-Gallary4.png"
+    ]
+  },
+  {
+    "id": "tour-of-the-lucca-hills",
+    "name": "Tour of the Lucca Hills",
+    "price": "$23",
+    "day": "SUNDAY",
+    "description": "Experience the scenic beauty of the Lucca Hills on this guided bike tour. Ride through picturesque vineyards, olive groves, and charming villages while enjoying panoramic views of the surrounding Tuscan landscape. It’s a peaceful yet invigorating adventure.",
+    "img": "https://i.ibb.co.com/2PsHhWL/touroftheluccahills1.png",
+    "imgGallery": [
+      "https://i.ibb.co.com/fn7Psyp/touroftheluccahills2.png",
+      "https://i.ibb.co.com/gDnw60L/touroftheluccahills3.png",
+      "https://i.ibb.co.com/CPqtDBy/touroftheluccahills4.png"
+    ],
+    "details": {
+      "detailsDescription": "The Tour of the Lucca Hills offers a stunning escape into the Tuscan countryside. This guided bike tour takes you through rolling hills, charming villages, and lush vineyards, providing a peaceful yet invigorating experience. You’ll pedal past centuries-old olive groves and get panoramic views of Lucca and the surrounding areas. Along the way, your guide will share fascinating insights into local agriculture, culture, and history. Whether you’re a cycling enthusiast or someone who enjoys the beauty of nature, this tour provides an intimate experience of the Tuscan landscape. It’s the perfect opportunity to connect with the heart of Tuscany in a unique and active way.",
+      "numberOfGroup": "8-20",
+      "duration": "4 hours and 45 minutes",
+      "departuringAndArrivingAreas": "Lucca city center",
+      "guideService": "Included",
+      "language": [
+        "English",
+        "Italian"
+      ],
+      "entryFees": "$6",
+      "entryTransportation": "Bus"
+    },
+    "gallery": [
+      "https://i.ibb.co.com/bXrcw5L/touroftheluccahills-Gallary1.png",
+      "https://i.ibb.co.com/CVkx80R/touroftheluccahills-Gallary2.png",
+      "https://i.ibb.co.com/6XL7xPC/touroftheluccahills-Gallary3.png",
+      "https://i.ibb.co.com/V3BDZ2n/touroftheluccahills-Gallary4.png"
     ]
   }
 ]

@@ -1,3 +1,4 @@
+import BikeBusRental from "../../components/BikeBusRental/BikeBusRental"
 import BookNewBike from "../../components/BookNewBike/BookNewBike"
 import ExplorePopularDestinations from "../../components/ExplorePopularDestinations/ExplorePopularDestinations"
 import Footer from "../../components/Footer/Footer"
@@ -15,6 +16,7 @@ const Home = () => {
         <ExplorePopularDestinations/>
         <WelcomeToOurSite/>
         <GetSpecialOffer/>
+        <BikeBusRental/>
         <BookNewBike/>
         <MostPopularPackages/>
         <Footer/>
