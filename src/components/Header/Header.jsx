@@ -5,10 +5,13 @@ import { useState } from "react";
 const Header = () => {
   const [navSmToggle, setNavSmToggle] = useState(true)
   const NavHandler = () => {
-      if (navSmToggle) {
-       setNavSmToggle(!navSmToggle) 
-      }
+    if (navSmToggle) {
+      setNavSmToggle(!navSmToggle)
+    }
+    else {
       setNavSmToggle(true)
+
+    }
   }
   return (
     <div className="fixed w-full font-open-sans border bg-orange-200 bg-opacity-55 text-black">
@@ -32,7 +35,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div onClick={NavHandler} className="text-5xl bg-white rounded-md p-1  active:scale-95 transition-all active:rotate-180">
+          <div onClick={NavHandler} className="text-4xl bg-white rounded-full p-2  active:scale-95 transition-all active:rotate-180">
             {navSmToggle ? <IoMdMenu /> : <IoClose />}
 
           </div>
