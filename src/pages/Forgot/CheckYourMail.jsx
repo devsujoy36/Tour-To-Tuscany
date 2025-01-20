@@ -22,7 +22,9 @@ const CheckYourMail = () => {
                         </div>
 
                         <div className="text-center">
-                            <button className="border-2 w-full rounded-full cursor-pointer text-white bg-orange-500 py-2 text-xl mt-4 active:scale-95 hover:bg-transparent hover:text-orange-500 transition-all"><Link to={"/setnewpassword"}>Open email app</Link></button>
+                            <Link to={"/setnewpassword"}>
+                                <button className="border-2 w-full rounded-full cursor-pointer text-white bg-orange-500 py-2 text-xl mt-4 active:scale-95 hover:bg-transparent hover:text-orange-500 transition-all">Open email app</button>
+                            </Link>
                         </div>
                     </div>
                     <h1 className="mt-2">Don&apos;t receive the email? <Link to={"/checkyourmail"} className="text-orange-400 font-medium active:text-black hover:underline transition-all">Click to resend</Link></h1>

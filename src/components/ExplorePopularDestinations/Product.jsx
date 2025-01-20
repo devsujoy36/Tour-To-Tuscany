@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom"
 
 const Product = ({ tour }) => {
-    const { id, name, img, price, day, details } = tour;
+    const { name, img, price, day, details } = tour;
     const { numberOfGroup } = details;
 
     return (
