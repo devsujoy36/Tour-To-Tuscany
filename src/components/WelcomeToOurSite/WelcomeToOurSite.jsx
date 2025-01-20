@@ -18,7 +18,7 @@ const WelcomeToOurSite = () => {
             <p className="text-xl my-10">After decades of experience, and a whole life in Lucca, we offer you the most complete tourism service in the city. In addition to having bikes and rickshaws to have as much fun as you want, you have the choice of tour guides with whom to tour and drivers for your every need! We offer packages in the way that you get the most at the lowest price. Book with us and we will always be available for you!</p>
 
             <div>
-              <div className="grid grid-cols-2 md:grid-cols-4  gap-16">
+              <div className="grid grid-cols-2 md:grid-cols-4  lg:gap-10">
 
                 <div className="text-gray-500 text-xl grid gap-1">
                   <h1 className="text-4xl font-bold text-[#FA8B02]">20+</h1>

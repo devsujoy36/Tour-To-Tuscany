@@ -17,15 +17,15 @@ const Header = () => {
   }
   return (
     <div className="fixed w-full font-open-sans border bg-orange-200 bg-opacity-55 text-black">
-      <div className=" max-w-screen-2xl mx-auto ">
-        <nav className=" flex justify-between  items-center text-xl font-medium py-2 lg:px-10 px-5">
+      <div className=" max-w-screen-2xl lg:mx-auto">
+        <nav className=" flex justify-between  items-center text-xl font-medium py-2 l px-5">
 
           <div>
             <img className="w-20" src="https://i.ibb.co.com/dQ3twTX/navlogo.png" alt="navLogo" />
           </div>
 
-          <div className="md:flex hidden gap-5 justify-between items-center">
-            <div className="flex  items-center justify-center  gap-5">
+          <div className="lg:flex hidden lg:gap-5 justify-between items-center">
+            <div className="flex  items-center justify-center  lg:gap-2">
               <NavLink className="hover:text-[#ffc684] px-4 py-1 rounded-lg active:scale-95 transition-all" to={"/"}>Home</NavLink>
               <NavLink className="hover:text-[#ffc684] px-4 py-1 rounded-lg active:scale-95 transition-all" to={"/aboutus"}>About Us</NavLink>
               <NavLink className="hover:text-[#ffc684] px-4 py-1 rounded-lg active:scale-95 transition-all" to={"/tourpackages"}>Tour Packages</NavLink>
@@ -37,7 +37,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div onClick={navHandler} className="text-4xl flex md:hidden bg-white duration-200 rounded-full p-2  transition-all active:rotate-180">
+          <div onClick={navHandler} className="text-4xl flex lg:hidden bg-orange-400 duration-200 rounded-full p-2  transition-all active:rotate-180">
             {navSmToggle ? <IoMdMenu /> : <IoClose />}
 
           </div>
