@@ -4,7 +4,9 @@ import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 const Header = () => {
   const [navSmToggle, setNavSmToggle] = useState(true)
-  const NavHandler = () => {
+  const navFlex = "flex flex-col absolute z-50 mx-2 mt-3 top-24 duration-500 right-3 gap-1 border p-3 text-[16px] rounded-lg bg-white"
+  const navHide = "flex flex-col absolute z-50 mx-2 mt-3 top-24 duration-500 -right-44 gap-1 border p-3 text-[16px] rounded-lg bg-white"
+  const navHandler = () => {
     if (navSmToggle) {
       setNavSmToggle(!navSmToggle)
     }
@@ -35,13 +37,13 @@ const Header = () => {
             </div>
           </div>
 
-          <div onClick={NavHandler} className="text-4xl bg-white rounded-full p-2  active:scale-95 transition-all active:rotate-180">
+          <div onClick={navHandler} className="text-4xl flex md:hidden bg-white duration-200 rounded-full p-2  transition-all active:rotate-180">
             {navSmToggle ? <IoMdMenu /> : <IoClose />}
 
           </div>
 
-          <div className="flex flex-col absolute mx-2 mt-3 top-24 right-3 gap-2 border p-3 text-[18px] rounded-lg bg-white">
-            <div className="flex flex-col gap-2">
+          {<div className={navSmToggle ? navHide : navFlex}>
+            <div className="flex flex-col gap-1">
               <NavLink className="hover:text-[#ffc684] px-2 py-1 rounded-lg active:scale-95 transition-all" to={"/"}>Home</NavLink>
               <NavLink className="hover:text-[#ffc684] px-2 py-1 rounded-lg active:scale-95 transition-all" to={"/aboutus"}>About Us</NavLink>
               <NavLink className="hover:text-[#ffc684] px-2 py-1 rounded-lg active:scale-95 transition-all" to={"/tourpackages"}>Tour Packages</NavLink>
@@ -51,7 +53,7 @@ const Header = () => {
               <NavLink className="hover:bg-[#FA8B02]  px-2 py-1 text-black  active:scale-95 rounded-full  border-2 hover:border-transparent border-orange-400  transition-all" to={"/login"}>Login</NavLink>
               <NavLink className="bg-[#FA8B02] px-2 py-1 active:scale-95 rounded-full hover:bg-transparent border-2 hover:text-orange-400 border-transparent hover:border-orange-400 transition-all" to={"/signup"}>Sign Up</NavLink>
             </div>
-          </div>
+          </div>}
 
         </nav>
       </div>
