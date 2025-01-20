@@ -4,24 +4,23 @@ import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 const Header = () => {
   const [navSmToggle, setNavSmToggle] = useState(true)
-  const navFlex = "flex flex-col absolute z-50 mx-2 mt-3 top-24 duration-500 right-3 gap-1 border p-3 text-[16px] rounded-lg bg-white"
-  const navHide = "flex flex-col absolute z-50 mx-2 mt-3 top-24 duration-500 -right-44 gap-1 border p-3 text-[16px] rounded-lg bg-white"
+  const navFlex = "flex flex-col absolute z-50 mx-2 mt-2 top-20 duration-500 right-3 gap-1 border p-3 text-[16px] rounded-lg bg-white"
+  const navHide = "flex flex-col absolute z-50 mx-2 mt-2 top-20 duration-500 -right-44 gap-1 border p-3 text-[16px] rounded-lg bg-white"
   const navHandler = () => {
     if (navSmToggle) {
       setNavSmToggle(!navSmToggle)
     }
     else {
       setNavSmToggle(true)
-
     }
   }
   return (
     <div className="fixed w-full font-open-sans border bg-orange-200 bg-opacity-55 text-black">
       <div className=" max-w-screen-2xl lg:mx-auto">
-        <nav className=" flex justify-between  items-center text-xl font-medium py-2 l px-5">
+        <nav className=" flex justify-between  items-center text-xl font-medium py-2 px-5">
 
           <div>
-            <img className="w-20" src="https://i.ibb.co.com/dQ3twTX/navlogo.png" alt="navLogo" />
+            <img className="lg:w-20 w-14" src="https://i.ibb.co.com/dQ3twTX/navlogo.png" alt="navLogo" />
           </div>
 
           <div className="lg:flex hidden lg:gap-5 justify-between items-center">
@@ -39,7 +38,6 @@ const Header = () => {
 
           <div onClick={navHandler} className="text-4xl flex lg:hidden bg-orange-400 duration-200 rounded-full p-2  transition-all active:rotate-180">
             {navSmToggle ? <IoMdMenu /> : <IoClose />}
-
           </div>
 
           {<div className={navSmToggle ? navHide : navFlex}>
