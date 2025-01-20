@@ -10,7 +10,7 @@ const Signup = () => {
 
             <div className="max-w-screen-2xl lg:mx-auto min-h-[100vh] flex justify-center items-center">
 
-                <div className="bg-white p-8 rounded-2xl min-w-96 ">
+                <div className="bg-white p-10 rounded-2xl min-w-96 ">
                     <form onSubmit={hangleSubmit}>
                         <h1 className="text-4xl font-bold mb-5">Create Account</h1>
 
