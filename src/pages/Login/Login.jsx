@@ -8,7 +8,7 @@ const Login = () => {
     }
     return (
         <div style={{ backgroundImage: `url(https://i.ibb.co.com/7S1bjwg/hero.png)` }} className="bg-cover bg-center font-baloo-2 ">
-            <Helmet> <title>TOURS TO TUSCANY | SIGN UP</title> </Helmet>
+            <Helmet> <title>TOURS TO TUSCANY | LOGIN</title> </Helmet>
 
             <div className="max-w-screen-2xl lg:mx-auto min-h-[100vh] flex justify-center items-center">
 

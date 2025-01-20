@@ -22,7 +22,7 @@ const ExplorePopularDestinations = () => {
     <div className="max-w-screen-2xl lg:mx-auto mx-10 py-20" >
       <div className="">
         <h1 className="text-4xl pb-10 font-bold">Explore Our Popular Destinations</h1>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
           {tours.map((tour, idx) => (<Product key={idx} tour={tour} />))}
         </div>
       </div>

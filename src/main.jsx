@@ -12,6 +12,9 @@ import Signup from './pages/Signup/Signup.jsx'
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx'
 import { HelmetProvider } from 'react-helmet-async'
 import Forgot from './pages/Forgot/Forgot.jsx'
+import CheckYourMail from './pages/Forgot/CheckYourMail.jsx'
+import SetNewPassword from './pages/Forgot/setnewpassword.jsx'
+import PasswordReset from './pages/Forgot/PasswordReset.jsx'
 
 const router = createBrowserRouter([
   {
@@ -42,6 +45,18 @@ const router = createBrowserRouter([
       {
         path: "/forgotpass",
         element: <Forgot />
+      },
+      {
+        path: "/checkyourmail",
+        element: <CheckYourMail />
+      },
+      {
+        path: "/setnewpassword",
+        element: <SetNewPassword />
+      },
+      {
+        path: "/passwordreset",
+        element: <PasswordReset />
       },
       {
         path: "/signup",

@@ -37,13 +37,13 @@ const BookNewBike = () => {
 
               <div className="flex flex-col gap-1">
                 <label htmlFor="" className="text-lg">Date</label>
-                <input type="date" placeholder="Select The Date" className="px-4 py-3 rounded-md" />
+                <input type="date" placeholder="Select The Date" className="px-4 w-full py-3 rounded-md" />
               </div>
 
 
               <div className="flex flex-col gap-1">
                 <label htmlFor="" className="text-lg">Time</label>
-                <input type="time" placeholder="Select the time" className="px-4 py-3 rounded-md" />
+                <input type="time" placeholder="Select the time" className="px-4 w-full py-3 rounded-md" />
               </div>
 
             </div>
