@@ -11,6 +11,7 @@ import Login from './pages/Login/Login.jsx'
 import Signup from './pages/Signup/Signup.jsx'
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx'
 import { HelmetProvider } from 'react-helmet-async'
+import Forgot from './pages/Forgot/Forgot.jsx'
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />
+      },
+      {
+        path: "/forgotpass",
+        element: <Forgot />
       },
       {
         path: "/signup",
