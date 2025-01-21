@@ -22,7 +22,6 @@ const ExplorePopularDestinations = ({ sectionTitile }) => {
       .catch((error) => console.error("Error fetching JSON:", error));
   }, []);
 
-  // console.log(tours);
 
   return (
     <div className="max-w-screen-2xl lg:mx-auto mx-10 md:py-20 py-10" >
@@ -34,7 +33,6 @@ const ExplorePopularDestinations = ({ sectionTitile }) => {
               slidesPerView={1}
               spaceBetween={30}
               freeMode={true}
-              loop={true}
               autoplay={{
                 delay: 1500,
                 

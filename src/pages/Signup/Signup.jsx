@@ -1,13 +1,21 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { Helmet } from "react-helmet-async"
 import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../Providers/AuthProviders";
+import { ToastContainer, toast } from 'react-toastify';
 const Signup = () => {
     const { user, createUser } = useContext(AuthContext)
-    console.log("User from signup",user);
+    console.log("User from signup", user);
+    const notify = (text) => toast(text);
     const navigate = useNavigate()
+
+    const [success, setSuccess] = useState('')
+    const [registerError, setRegisterError] = useState('')
+
     const hangleSubmit = (e) => {
         e.preventDefault()
+        setSuccess("")
+        setRegisterError("")
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
@@ -16,15 +24,21 @@ const Signup = () => {
             .then(result => {
                 console.log(result.user);
                 navigate("/login")
+                notify('User Created Successfully')
+
+                setSuccess('User Created Successfully')
+                e.target.reset()
             })
             .catch(error => {
                 console.log(error.message);
+                notify(error.message)
+                setRegisterError(error.message)
             })
     }
     return (
         <div style={{ backgroundImage: `url(https://i.ibb.co.com/7S1bjwg/hero.png)` }} className="bg-cover bg-center font-baloo-2 ">
             <Helmet> <title>TOURS TO TUSCANY | SIGN UP</title> </Helmet>
-
+            <ToastContainer />
             <div className="max-w-screen-2xl lg:mx-auto min-h-[100vh] flex justify-center items-center">
 
                 <div className="bg-white p-10 rounded-2xl min-w-96 ">
@@ -36,6 +50,8 @@ const Signup = () => {
                             <input type="text" name="name" placeholder="Enter your name and surname" className="px-4 py-3 rounded-md border-2" required />
                             <label htmlFor="" className="text-xl font-medium">Email Adress</label>
                             <input type="email" name="email" placeholder="Enter your email adress" className="px-4 py-3 rounded-md border-2" required />
+                            {registerError && <p className="text-xs text-red-500">{registerError}</p>}
+                        {success && <p className="text-xs text-emerald-500">{success}</p>}
                             <label htmlFor="" className="text-xl font-medium">Password</label>
                             <input type="password" name="password" placeholder="Enter your Password" className="px-4 py-3 rounded-md border-2" required />
                             <div className="flex mt-2 justify-start items-center gap-1">
@@ -58,6 +74,9 @@ const Signup = () => {
                         </button>
 
                         <h1 className="mt-2">Already have an account? <Link to={"/login"} className="text-orange-400 font-medium">Log in</Link></h1>
+
+                        
+
                     </div>
                 </div>
 

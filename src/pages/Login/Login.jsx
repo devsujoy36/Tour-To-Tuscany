@@ -1,15 +1,36 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet-async"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { toast, ToastContainer } from "react-toastify";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 
 const Login = () => {
+    const notify = (text) => toast(text);
+    const navigate = useNavigate()
+    const { user, loginUser } = useContext(AuthContext);
+
     const hangleSubmit = (e) => {
         e.preventDefault()
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        loginUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                notify('Log In SuccessFully')
+                navigate("/")
+            })
+            .catch(error => {
+                console.log(error.message);
+                notify(error.message)
+            })
+
+
     }
     return (
         <div style={{ backgroundImage: `url(https://i.ibb.co.com/7S1bjwg/hero.png)` }} className="bg-cover bg-center font-baloo-2 ">
             <Helmet> <title>TOURS TO TUSCANY | LOGIN</title> </Helmet>
-
+            <ToastContainer />
             <div className="max-w-screen-2xl lg:mx-auto min-h-[100vh] flex justify-center items-center">
 
                 <div className="bg-white p-10 rounded-2xl min-w-96 ">
@@ -18,9 +39,9 @@ const Login = () => {
 
                         <div className="flex flex-col gap-1 text-gray-500 ">
                             <label htmlFor="" className="text-xl font-medium">Email Adress</label>
-                            <input type="email" placeholder="Enter your email adress" className="px-4 py-3 rounded-md border-2" />
+                            <input type="email" name="email" placeholder="Enter your email adress" className="px-4 py-3 rounded-md border-2" />
                             <label htmlFor="" className="text-xl font-medium">Password</label>
-                            <input type="password" placeholder="Enter your Password" className="px-4 py-3 rounded-md border-2" />
+                            <input type="password" name="password" placeholder="Enter your Password" className="px-4 py-3 rounded-md border-2" />
                             <div className="flex mt-2 justify-end items-center gap-1">
                                 <Link to={"/forgotpass"} className="hover:underline ">Fotgot your password?</Link>
                             </div>
