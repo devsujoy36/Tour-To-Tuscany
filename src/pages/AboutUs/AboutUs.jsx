@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
+import HappyCustomers from "../../components/HappyCustomers/HappyCustomers"
 
 const AboutUs = () => {
     return (
@@ -68,7 +69,7 @@ const AboutUs = () => {
 
             {/* one more section */}
             <div className="bg-orange-300">
-                <div className="max-w-screen-2xl grid md:grid-cols-2 lg:grid-cols-4 gap-20 font-medium lg:mx-auto mx-10 py-20 text-center">
+                <div className="max-w-screen-2xl grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 gap-5 font-medium lg:mx-auto mx-10 md:py-20 py-10 text-center">
 
                     <div className="bg-orange-200 p-10 flex flex-col justify-center items-center text-xl rounded-2xl gap-5">
                         <img src="https://i.ibb.co.com/KyC0vXP/wishes.png" alt="" />
@@ -87,6 +88,10 @@ const AboutUs = () => {
                         <h1>Guaranteed fun at the <br /> best price!</h1>
                     </div>
                 </div>
+            </div>
+
+            <div className="py-20 mx-10">
+                <HappyCustomers/>
             </div>
 
         </div>

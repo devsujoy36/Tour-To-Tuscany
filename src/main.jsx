@@ -15,6 +15,7 @@ import Forgot from './pages/Forgot/Forgot.jsx'
 import CheckYourMail from './pages/Forgot/CheckYourMail.jsx'
 import SetNewPassword from './pages/Forgot/setnewpassword.jsx'
 import PasswordReset from './pages/Forgot/PasswordReset.jsx'
+import PackageDetails from './pages/TourPackage/PackageDetails.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
       {
         path: "/tourpackages",
         element: <TourPackage />
+      },
+      {
+        path: "/tourpackages/:packageId",
+        element: <PackageDetails />,
+        loader: ()=>fetch("../tourPackages.json")
       },
       {
         path: "/contactus",

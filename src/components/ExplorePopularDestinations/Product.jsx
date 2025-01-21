@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom"
 
 const Product = ({ tour }) => {
-    const { name, img, price, day, details } = tour;
+    const {id, name, img, price, day, details } = tour;
     const { numberOfGroup } = details;
 
     return (
@@ -21,7 +21,7 @@ const Product = ({ tour }) => {
                 </div>
                 <div className="flex flex-col gap-2">
                     <p className="text-lg">A tour of the city and its surroundings led by a professional guide ...</p>
-                    <Link className="text-[#FA8B02] underline  hover:text-black transition-all">Read More</Link>
+                    <Link to={`/tourpackages/${id}`} className="text-[#FA8B02] underline  hover:text-black transition-all">Read More</Link>
                 </div>
             </div>
         </div>

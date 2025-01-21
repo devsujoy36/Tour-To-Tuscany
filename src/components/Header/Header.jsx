@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";
@@ -19,9 +19,9 @@ const Header = () => {
       <div className=" max-w-screen-2xl lg:mx-auto">
         <nav className=" flex justify-between  items-center text-xl font-medium py-2 px-5">
 
-          <div>
+          <Link to={"/"}>
             <img className="lg:w-20 w-14" src="https://i.ibb.co.com/dQ3twTX/navlogo.png" alt="navLogo" />
-          </div>
+          </Link>
 
           <div className="lg:flex hidden lg:gap-5 justify-between items-center">
             <div className="flex  items-center justify-center  lg:gap-2">
