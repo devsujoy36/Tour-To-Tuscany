@@ -35,7 +35,7 @@ const Hero = () => {
             <button className="hover:bg-orange-400 text-lg hover:px-8 px-4 py-1 rounded-full font-semibold border-2 hover:border-transparent border-white  active:scale-95 transition-all">Tour Form</button>
           </div>
           :
-          <div className="text-black  bg-white bg-opacity-10 p-5 rounded-xl">
+          <div className="text-black  bg-white bg-opacity-10 p-5 rounded-xl md:text-lg text-xs">
             <div className="bg-white bg-opacity-20 w-fit flex rounded-t-2xl ">
               <button onClick={publicTourActiveHandler} className={tourForm ? publicTourActive : tourDeactive}>
                 <div className=" px-5 py-3  flex justify-center items-center gap-2 font-medium">

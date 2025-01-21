@@ -16,6 +16,7 @@ import CheckYourMail from './pages/Forgot/CheckYourMail.jsx'
 import SetNewPassword from './pages/Forgot/setnewpassword.jsx'
 import PasswordReset from './pages/Forgot/PasswordReset.jsx'
 import PackageDetails from './pages/TourPackage/PackageDetails.jsx'
+import AuthProviders from './Providers/AuthProviders.jsx'
 
 
 // https://www.klook.com/experiences/list/tuscany-tours/c316-cate9/
@@ -41,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: "/tourpackages/:packageId",
         element: <PackageDetails />,
-        loader: ()=>fetch("../tourPackages.json")
+        loader: () => fetch("../tourPackages.json")
       },
       {
         path: "/contactus",
@@ -77,7 +78,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
-      <RouterProvider router={router} />
+      <AuthProviders>
+        <RouterProvider router={router} />
+      </AuthProviders>
     </HelmetProvider>
   </StrictMode>,
 )

@@ -1,8 +1,25 @@
+import { useContext } from "react"
 import { Helmet } from "react-helmet-async"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { AuthContext } from "../../Providers/AuthProviders";
 const Signup = () => {
+    const { user, createUser } = useContext(AuthContext)
+    console.log("User from signup",user);
+    const navigate = useNavigate()
     const hangleSubmit = (e) => {
         e.preventDefault()
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log("name email pass", name, email, password);
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                navigate("/login")
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
     }
     return (
         <div style={{ backgroundImage: `url(https://i.ibb.co.com/7S1bjwg/hero.png)` }} className="bg-cover bg-center font-baloo-2 ">
@@ -16,13 +33,13 @@ const Signup = () => {
 
                         <div className="flex flex-col gap-1 text-gray-500 text-lg">
                             <label htmlFor="" className="text-xl font-medium">Name and Surname</label>
-                            <input type="text" placeholder="Enter your name and surname" className="px-4 py-3 rounded-md border-2" />
+                            <input type="text" name="name" placeholder="Enter your name and surname" className="px-4 py-3 rounded-md border-2" required />
                             <label htmlFor="" className="text-xl font-medium">Email Adress</label>
-                            <input type="email" placeholder="Enter your email adress" className="px-4 py-3 rounded-md border-2" />
+                            <input type="email" name="email" placeholder="Enter your email adress" className="px-4 py-3 rounded-md border-2" required />
                             <label htmlFor="" className="text-xl font-medium">Password</label>
-                            <input type="password" placeholder="Enter your Password" className="px-4 py-3 rounded-md border-2" />
+                            <input type="password" name="password" placeholder="Enter your Password" className="px-4 py-3 rounded-md border-2" required />
                             <div className="flex mt-2 justify-start items-center gap-1">
-                                <input type="checkbox" />
+                                <input type="checkbox" required />
                                 <label htmlFor="">I agree with <a href="" className="text-orange-400">Terms</a>  and <a href="" className="text-orange-400">Privacy</a></label>
                             </div>
                         </div>

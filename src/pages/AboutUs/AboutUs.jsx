@@ -15,7 +15,7 @@ const AboutUs = () => {
                     <div className="lg:w-3/6  font-medium mt-5">
                         <h1 className="md:text-2xl ">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</h1>
                     </div>
-                    <Link to={"/tourpackages"} className="md:text-2xl border-2 px-10 py-3 rounded-full mt-5 hover:bg-orange-400 font-medium active:scale-95 transition-all">View our Tour Packages</Link>
+                    <Link to={"/tourpackages"} className="md:text-xl border-2 px-5 hover:px-10 hover:border-transparent py-3 rounded-full mt-5 hover:bg-orange-400 font-medium active:scale-95 transition-all">View our Tour Packages</Link>
                 </div>
             </div>
 
@@ -61,9 +61,7 @@ const AboutUs = () => {
 
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
 
@@ -91,7 +89,7 @@ const AboutUs = () => {
             </div>
 
             <div className="py-20 mx-10">
-                <HappyCustomers/>
+                <HappyCustomers />
             </div>
 
         </div>
