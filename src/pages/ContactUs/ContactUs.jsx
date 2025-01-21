@@ -4,11 +4,11 @@ const ContactUs = () => {
         e.preventDefault()
     }
     return (
-        <div className=" font-baloo-2 md:pt-40">
+        <div className=" font-baloo-2 md:pt-24 ">
             <Helmet><title>TOURS TO TUSCANY | CONTACT US</title></Helmet>
 
             <div className="bg-orange-300 ">
-                <div className="max-w-screen-2xl lg:mx-auto  lg:py-16 py-20 ">
+                <div className="max-w-screen-2xl  lg:mx-auto  lg:py-16 py-20 ">
                     <div className="flex justify-between lg:flex-row flex-col items-center gap-8 md:gap-10 p-10">
 
                         <div className="grid md:gap-8  gap-3 text-xl font-medium  lg:w-1/2">

@@ -27,6 +27,7 @@ const Footer = () => {
               <a href="/">Home</a>
               <a href="/aboutus">About Us</a>
               <a href="/tourpackages">Tour Package</a>
+              <a href="/contactus">Contact Us</a>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -35,15 +36,16 @@ const Footer = () => {
               <a href="#">Provicy Policy</a>
             </div>
 
-            <div className="flex flex-col justify-start items-start gap-2">
+            <div className="flex flex-col justify-start items-start gap-3">
+
               <h1 className="text-xl font-semibold mb-2">Contacts</h1>
               <div className="flex justify-center items-center gap-2">
                 <img className="w-6" src="https://i.ibb.co.com/MVJsfLG/location.png" alt="" />
-                <h1>Piazza Napoleone, Lucca, Tuscany </h1>
+                <h1>Ganginar Par Rd, Mymensingh </h1>
               </div>
               <div className="flex justify-center items-center gap-1">
                 <img className="w-6" src="https://i.ibb.co.com/R36Q5fS/phone.png" alt="" />
-                <h1>+880 1303436299 </h1>
+                <h1>+880 13034-36299 </h1>
               </div>
               <div className="flex justify-center items-center gap-2">
                 <img className="w-6" src="https://i.ibb.co.com/GvPJBtD/mail.png" alt="" />

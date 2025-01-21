@@ -8,13 +8,15 @@ import MostPopularPackages from "../../components/MostPopularPackages/MostPopula
 import WelcomeToOurSite from "../../components/WelcomeToOurSite/WelcomeToOurSite"
 
 const Home = () => {
+
+  const sectionTitile = "Explore Our Popular Destinations"
   return (
     <div className="">
       <Helmet>
         <title>TOURS TO TUSCANY | HOME</title>
       </Helmet>
       <Hero />
-      <ExplorePopularDestinations />
+      <ExplorePopularDestinations sectionTitile={sectionTitile}/>
       <WelcomeToOurSite />
       <GetSpecialOffer />
       <BikeBusRental />

@@ -1,7 +1,13 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 import Product from "./Product"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { FreeMode, Autoplay } from 'swiper/modules';
+const ExplorePopularDestinations = ({ sectionTitile }) => {
 
-const ExplorePopularDestinations = () => {
   const [tours, setTours] = useState([]);
 
   useEffect(() => {
@@ -19,11 +25,44 @@ const ExplorePopularDestinations = () => {
   // console.log(tours);
 
   return (
-    <div className="max-w-screen-2xl lg:mx-auto mx-10 py-20" >
+    <div className="max-w-screen-2xl lg:mx-auto mx-10 md:py-20 py-10" >
       <div className="">
-        <h1 className="text-4xl pb-10 text-orange-500 font-bold">Explore Our Popular Destinations</h1>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
-          {tours.map((tour, idx) => (<Product key={idx} tour={tour} />))}
+        <h1 className="md:text-4xl text-3xl md:pb-10 pb-5 font-bold">{sectionTitile}</h1>
+        <div className="">
+          <div>
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              freeMode={true}
+              loop={true}
+              autoplay={{
+                delay: 1500,
+                
+              }}
+              modules={[FreeMode, Autoplay]}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 50,
+                },
+              }}
+              className="mySwiper"
+            >
+              {tours.map((tour, idx) => (
+                <SwiperSlide className="" key={idx}>
+                  <Product tour={tour} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
     </div>

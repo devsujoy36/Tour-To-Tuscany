@@ -13,7 +13,7 @@ const PackageDetails = () => {
 
       {/* packageDetails hero */}
       <div className="flex flex-col lg:flex-row gap-10 items-start ">
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 w-full">
           <img src={img} className="rounded-xl" alt="" />
           <div className="flex gap-2  lg:gap-5 mt-2 lg:mt-5">
             {imgGallery.map((imgG, idx) => <img className="md:w-fit w-28" key={idx} src={imgG} alt="" />)}

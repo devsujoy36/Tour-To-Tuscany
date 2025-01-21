@@ -17,7 +17,7 @@ const GetSpecialOffer = () => {
 
           </div>
 
-          <div className="-mt-28">
+          <div className="lg:-mt-28">
             <img className="lg:w-[450px] " src="https://i.ibb.co.com/9hZB1VV/getspecial.png" alt="" />
           </div>
 

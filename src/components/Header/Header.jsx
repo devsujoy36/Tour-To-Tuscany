@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom"
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 const Header = () => {
   const [navSmToggle, setNavSmToggle] = useState(true)
   const navFlex = "flex flex-col absolute z-50 mx-2 mt-2 top-20 duration-500 right-3 gap-1 border p-3 text-[16px] rounded-lg bg-white"
@@ -14,8 +14,19 @@ const Header = () => {
       setNavSmToggle(true)
     }
   }
+  // const menuRef = useRef()
+  // const handleClickOutside = (event) =>{
+  //   if(menuRef.current && ! menuRef.current.contains(event.target)){
+  //     setNavSmToggle(false)
+  //   }
+  // }
+
+  // useEffect(() => {
+    
+  // }, [])
+  
   return (
-    <div className="fixed w-full font-open-sans border bg-orange-200 bg-opacity-55 text-black">
+    <div className="fixed w-full z-50 font-open-sans border bg-orange-200 bg-opacity-55 text-black">
       <div className=" max-w-screen-2xl lg:mx-auto">
         <nav className=" flex justify-between  items-center text-xl font-medium py-2 px-5">
 

@@ -6,7 +6,7 @@ const Product = ({ tour }) => {
     const { numberOfGroup } = details;
 
     return (
-        <div className="  rounded-2xl p-3 bg-white">
+        <div className="  rounded-2xl p-3 bg-white text-left">
             <div
                 className="h-[400px] border rounded-xl bg-center bg-cover"
                 style={{ backgroundImage: `url(${img})` }}>
