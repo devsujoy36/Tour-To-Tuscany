@@ -36,7 +36,6 @@ const Header = () => {
               <NavLink className="hover:text-[#ffc684] px-4 py-1 rounded-lg active:scale-95 transition-all" to={"/tourpackages"}>Tour Packages</NavLink>
               <NavLink className="hover:text-[#ffc684] px-4 py-1 rounded-lg active:scale-95 transition-all" to={"/contactus"}>Contact Us</NavLink>
             </div>
-
             {!user
               ?
               <div className="flex items-center justify-center gap-5 ">
@@ -44,8 +43,10 @@ const Header = () => {
                 <NavLink className="bg-[#FA8B02] px-10 py-2 active:scale-95 rounded-full hover:bg-transparent border-2 hover:text-orange-400 border-transparent hover:border-orange-400 transition-all" to={"/signup"}>Sign Up</NavLink>
               </div>
               :
-              <button onClick={logoutUser} className="bg-[#FA8B02] px-10 py-2 active:scale-95 rounded-full hover:bg-transparent border-2  border-transparent hover:border-orange-400 transition-all" >Log Out</button>
-
+              <div className="flex justify-center items-center gap-6">
+                <NavLink className="hover:text-[#ffc684] px-4 py-1 rounded-lg active:scale-95 transition-all" to={"/profile"}>Profile</NavLink>
+                <button onClick={logoutUser} className="bg-[#FA8B02] px-10 py-2 active:scale-95 rounded-full hover:bg-transparent border-2  border-transparent hover:border-orange-400 transition-all" >Log Out</button>
+              </div>
             }
 
           </div>
@@ -68,7 +69,10 @@ const Header = () => {
                 <NavLink className="bg-[#FA8B02] px-2 py-1 active:scale-95 rounded-full hover:bg-transparent border-2 hover:text-orange-400 border-transparent hover:border-orange-400 transition-all" to={"/signup"}>Sign Up</NavLink>
               </div>
               :
-              <button onClick={logoutUser} className="bg-[#FA8B02] px-10 py-2 active:scale-95 rounded-full hover:bg-transparent border-2  border-transparent hover:border-orange-400 transition-all" >Log Out</button>
+              <div className="flex flex-col gap-2 text-left">
+                <NavLink className="hover:text-[#ffc684] px-2 py-1 rounded-lg active:scale-95 transition-all" to={"/profile"}>Profile</NavLink>
+                <button onClick={logoutUser} className="bg-[#FA8B02] px-10 py-2 active:scale-95 rounded-full hover:bg-transparent border-2  border-transparent hover:border-orange-400 transition-all" >Log Out</button>
+              </div>
             }
           </div>}
 

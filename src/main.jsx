@@ -17,6 +17,8 @@ import SetNewPassword from './pages/Forgot/setnewpassword.jsx'
 import PasswordReset from './pages/Forgot/PasswordReset.jsx'
 import PackageDetails from './pages/TourPackage/PackageDetails.jsx'
 import AuthProviders from './Providers/AuthProviders.jsx'
+import Profile from './pages/Profile/Profile.jsx'
+import PrivateRoute from './Providers/PrivateRoute.jsx'
 
 
 // https://www.klook.com/experiences/list/tuscany-tours/c316-cate9/
@@ -71,6 +73,10 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <Signup />
+      },
+      {
+        path: "/profile",
+        element: <PrivateRoute><Profile /></PrivateRoute>
       }
     ]
   }

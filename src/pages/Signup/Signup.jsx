@@ -3,8 +3,10 @@ import { Helmet } from "react-helmet-async"
 import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../Providers/AuthProviders";
 import { ToastContainer, toast } from 'react-toastify';
+import { updateProfile } from "firebase/auth";
+import auth from "../../Firebase/firebase.config";
 const Signup = () => {
-    const { user, createUser } = useContext(AuthContext)
+    const { user, createUser, loginGoogle } = useContext(AuthContext)
     console.log("User from signup", user);
     const notify = (text) => toast(text);
     const navigate = useNavigate()
@@ -20,12 +22,41 @@ const Signup = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log("name email pass", name, email, password);
+
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
-                navigate("/login")
-                notify('User Created Successfully')
 
+                notify('User Created Successfully')
+                setSuccess('User Created Successfully')
+                e.target.reset()
+                updateProfile(auth.currentUser, {
+                    displayName: name,
+                })
+                    .then(() => {
+                        console.log('updated');
+                    })
+                    .catch((error) => {
+                        console.log(error.message);
+                    });
+
+                navigate("/profile")
+            })
+            .catch(error => {
+                console.log(error.message);
+                notify(error.message)
+                setRegisterError(error.message)
+            })
+    }
+
+    const signupGoogleHandler = (e) => {
+        setSuccess("")
+        setRegisterError("")
+        loginGoogle()
+            .then(result => {
+                console.log(result.user);
+                navigate("/profile")
+                notify('User Created Successfully')
                 setSuccess('User Created Successfully')
                 e.target.reset()
             })
@@ -35,6 +66,10 @@ const Signup = () => {
                 setRegisterError(error.message)
             })
     }
+
+
+
+
     return (
         <div style={{ backgroundImage: `url(https://i.ibb.co.com/7S1bjwg/hero.png)` }} className="bg-cover bg-center font-baloo-2 ">
             <Helmet> <title>TOURS TO TUSCANY | SIGN UP</title> </Helmet>
@@ -51,12 +86,12 @@ const Signup = () => {
                             <label htmlFor="" className="text-xl font-medium">Email Adress</label>
                             <input type="email" name="email" placeholder="Enter your email adress" className="px-4 py-3 rounded-md border-2" required />
                             {registerError && <p className="text-xs text-red-500">{registerError}</p>}
-                        {success && <p className="text-xs text-emerald-500">{success}</p>}
+                            {success && <p className="text-xs text-emerald-500">{success}</p>}
                             <label htmlFor="" className="text-xl font-medium">Password</label>
                             <input type="password" name="password" placeholder="Enter your Password" className="px-4 py-3 rounded-md border-2" required />
                             <div className="flex mt-2 justify-start items-center gap-1">
-                                <input type="checkbox" required />
-                                <label htmlFor="">I agree with <a href="" className="text-orange-400">Terms</a>  and <a href="" className="text-orange-400">Privacy</a></label>
+                                <input id="checkbox" type="checkbox" required />
+                                <label htmlFor="checkbox">I agree with <a href="" className="text-orange-400">Terms</a>  and <a href="" className="text-orange-400">Privacy</a></label>
                             </div>
                         </div>
                         <div className="text-center">
@@ -68,14 +103,13 @@ const Signup = () => {
                     <div className="text-center">
                         <h1 className="text-gray-400">or</h1>
 
-                        <button className="border-2 w-full flex justify-center items-center rounded-full text-gray-500 text-lg  active:scale-95 transition-all">
+                        <button onClick={signupGoogleHandler} className="border-2 w-full flex justify-center items-center rounded-full text-gray-500 text-lg  active:scale-95 transition-all">
                             <img className="w-12 rounded-full" src="https://i.ibb.co.com/b2Dx62N/google-icon.jpg" alt="" />
                             Sign Up with Google
                         </button>
 
                         <h1 className="mt-2">Already have an account? <Link to={"/login"} className="text-orange-400 font-medium">Log in</Link></h1>
 
-                        
 
                     </div>
                 </div>
