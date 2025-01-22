@@ -6,7 +6,7 @@ const Forgot = () => {
     const navigate = useNavigate()
     const hangleSubmit = (e) => {
         e.preventDefault()
-        navigate('/checkyourmail')
+        navigate('/setnewpassword')
     }
 
     return (

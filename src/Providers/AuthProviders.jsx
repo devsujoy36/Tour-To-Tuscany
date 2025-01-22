@@ -50,7 +50,8 @@ const AuthProviders = ({ children }) => {
     loginUser,
     logoutUser,
     loginGoogle,
-    emailVarification
+    emailVarification,
+    
   }
 
   return (

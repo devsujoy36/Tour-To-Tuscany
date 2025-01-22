@@ -3,13 +3,14 @@ import { AuthContext } from "../../Providers/AuthProviders"
 import { updateProfile } from "firebase/auth"
 import auth from "../../Firebase/firebase.config"
 import blankProfile from '../../../public/assets/blankProfile.png'
+import { useNavigate } from "react-router-dom"
 
 const Profile = () => {
   const { user } = useContext(AuthContext)
   const [profileError, setProfileError] = useState()
   const [success, setSuccess] = useState()
-
   const [updateForm, setUpdateForm] = useState(false)
+  const navigate = useNavigate()
 
   const hangleSubmit = (e) => {
     e.preventDefault()
@@ -59,7 +60,7 @@ const Profile = () => {
                   :
                   <div className="flex items-center justify-center gap-2">
                     <span className="text-red-500 font-medium">Not Varified</span>
-                    <button className="bg-red-500 font-medium md:px-4 px-2 md:py-1 md:hover:px-8 border-2 border-transparent hover:border-red-600 hover:text-red-500 active:scale-95 hover:bg-transparent transition-all rounded-full md:text-xl text-white ">Varify now</button>
+                    <button onClick={() => {navigate('/checkyourmail')}} className="bg-red-500 font-medium md:px-4 px-2 md:py-1 md:hover:px-8 border-2 border-transparent hover:border-red-600 hover:text-red-500 active:scale-95 hover:bg-transparent transition-all rounded-full md:text-xl text-white ">Varify now</button>
                   </div>
                 }
               </h1>
@@ -95,7 +96,7 @@ const Profile = () => {
                       <label htmlFor="checkbox">I agree with <a href="" className="text-orange-400">Terms</a>  and <a href="" className="text-orange-400">Privacy</a></label>
                     </div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center mb-2">
 
                     <input type="submit" value={"Update"} className="border-2 w-full rounded-full cursor-pointer text-white bg-orange-500 py-2 text-xl mt-3 active:scale-95 hover:bg-transparent hover:text-orange-500 transition-all" />
                   </div>

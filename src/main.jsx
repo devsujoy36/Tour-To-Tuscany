@@ -12,13 +12,13 @@ import Signup from './pages/Signup/Signup.jsx'
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx'
 import { HelmetProvider } from 'react-helmet-async'
 import Forgot from './pages/Forgot/Forgot.jsx'
-import CheckYourMail from './pages/Forgot/CheckYourMail.jsx'
-import SetNewPassword from './pages/Forgot/setnewpassword.jsx'
 import PasswordReset from './pages/Forgot/PasswordReset.jsx'
 import PackageDetails from './pages/TourPackage/PackageDetails.jsx'
 import AuthProviders from './Providers/AuthProviders.jsx'
 import Profile from './pages/Profile/Profile.jsx'
 import PrivateRoute from './Providers/PrivateRoute.jsx'
+import CheckYourMail from './pages/Profile/CheckYourMail.jsx'
+import SetNewPassword from './pages/Forgot/SetNewPassword.jsx'
 
 
 // https://www.klook.com/experiences/list/tuscany-tours/c316-cate9/
