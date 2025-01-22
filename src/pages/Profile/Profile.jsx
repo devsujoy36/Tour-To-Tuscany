@@ -1,5 +1,7 @@
 import { useContext, useState } from "react"
 import { AuthContext } from "../../Providers/AuthProviders"
+import { updateProfile } from "firebase/auth"
+import auth from "../../Firebase/firebase.config"
 
 
 const Profile = () => {
@@ -11,6 +13,21 @@ const Profile = () => {
 
   const hangleSubmit = (e) => {
     e.preventDefault()
+    const name = e.target.name.value;
+    const photo = e.target.profileImg.value;
+    const phone = e.target.phone.value
+    updateProfile(auth.currentUser, {
+      displayName: name,
+      phoneNumber: phone,
+      photoURL: photo,
+
+    })
+      .then(() => {
+        console.log('updated');
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
 
   }
 
@@ -23,10 +40,16 @@ const Profile = () => {
         <div className="flex items-start gap-10 flex-col md:flex-row">
           <div className="grid gap-8 lg:w-2/3">
             <figure className="border shadow-xl p-5 h-30 flex items-center gap-3  rounded-full ">
-              <img className="w-28 h-28 border rounded-full" src={user?.photoURL} alt="" />
+              <img className="w-28 h-28 border rounded-full" src={user?.photoURL
+                ?
+                user?.photoURL
+                :
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"></img>
+              } alt="" />
               <h1 className="font-medium text-3xl">{user?.displayName}</h1>
             </figure>
             <div className="md:mx-10 grid gap-3">
+              <h1><span className="font-medium">Phone: </span>{user?.phoneNumber}</h1>
               <h1><span className="font-medium">Email: </span>{user?.email}</h1>
               <h1 className="flex items-center gap-1">
                 <span className="font-medium">Varification Status:</span>
