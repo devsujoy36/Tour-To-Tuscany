@@ -14,19 +14,19 @@ const Profile = () => {
   const hangleSubmit = (e) => {
     e.preventDefault()
     const name = e.target.name.value;
-    const photo = e.target.profileImg.value;
-    const phone = e.target.phone.value
+    const phone = e.target.phoneNum.value;
+    console.log(phone);
     updateProfile(auth.currentUser, {
-      displayName: name,
       phoneNumber: phone,
-      photoURL: photo,
-
+      displayName: name,
     })
       .then(() => {
-        console.log('updated');
+        console.log('updated', user);
+        setSuccess('updated');
       })
       .catch((error) => {
         console.log(error.message);
+        setProfileError(error.message);
       });
 
   }
@@ -49,7 +49,6 @@ const Profile = () => {
               <h1 className="font-medium text-3xl">{user?.displayName}</h1>
             </figure>
             <div className="md:mx-10 grid gap-3">
-              <h1><span className="font-medium">Phone: </span>{user?.phoneNumber}</h1>
               <h1><span className="font-medium">Email: </span>{user?.email}</h1>
               <h1 className="flex items-center gap-1">
                 <span className="font-medium">Varification Status:</span>
@@ -83,14 +82,12 @@ const Profile = () => {
                     <h1 className="md:text-4xl text-2xl font-bold mb-5">Update Profile</h1>
 
                     <div className="flex flex-col gap-1 text-gray-500 text-lg">
-                      <label htmlFor="" className="text-xl font-medium">Profile Photo</label>
-                      <input type="file" name="profileImg" className="px-4 py-3 lg:w-full w-72 rounded-md border-2 " required />
 
                       <label htmlFor="" className="text-xl font-medium">Name and Surname</label>
                       <input type="text" name="name" placeholder="Enter your name and surname" className="px-4 py-3 rounded-md border-2 " required />
 
                       <label htmlFor="" className="text-xl font-medium">Phone Number</label>
-                      <input type="number" name="phone" placeholder="Enter your phone number" className="px-4 py-3 rounded-md border-2 " required />
+                      <input type="number" name="phoneNum" placeholder="Enter your phone number" className="px-4 py-3 rounded-md border-2 " required />
 
 
                       <div className="flex mt-2 justify-start items-center gap-1">

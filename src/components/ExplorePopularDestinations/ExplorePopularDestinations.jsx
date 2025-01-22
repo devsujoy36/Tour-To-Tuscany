@@ -41,7 +41,7 @@ const ExplorePopularDestinations = ({ sectionTitile }) => {
               breakpoints={{
                 640: {
                   slidesPerView: 1,
-                  spaceBetween: 10,
+                  spaceBetween: 5,
                 },
                 768: {
                   slidesPerView: 2,
