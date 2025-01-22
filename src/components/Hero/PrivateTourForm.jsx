@@ -6,12 +6,12 @@ const PrivateTourForm = () => {
 
             <div className="md:border-r-2 md:border-t-0 border-t-2 pt-2 md:pt-0 md:pr-4 w-full">
                 <h1 className="flex font-semibold gap-2 items-center "> <img src="https://i.ibb.co.com/N3L5dS0/system-uicons-calendar-month.png" alt="" /> Date</h1>
-                <input type="date" className="text-gray-500 py-2" />
+                <input type="date" className="text-gray-500 pl-8 py-2 w-full" />
             </div>
 
             <div className="md:border-r-2 md:border-t-0 border-t-2 pt-2 md:pt-0 md:pr-4 w-full">
                 <h1 className="flex font-semibold gap-2 items-center "> <img src="https://i.ibb.co.com/s3G14mp/system-uicons-clock.png" alt="" /> Time</h1>
-                <select className="pl-7 text-gray-500 py-2" name="" id="">
+                <select className="pl-7 text-gray-500 py-2 w-full" name="" id="">
                     <option value="" selected >Choose Time</option>
                     <option value="1:00 am">1:00 am</option>
                     <option value="2:00 am">2:00 am</option>
@@ -24,7 +24,7 @@ const PrivateTourForm = () => {
 
             <div className="md:border-r-2 md:border-t-0 border-t-2 pt-2 md:pt-0 md:pr-4 w-full">
                 <h1 className="flex font-semibold gap-2 items-center "> <img src="https://i.ibb.co.com/gVYwNzz/icon-tour.png" alt="" /> Tour</h1>
-                <select className="pl-7 text-gray-500 py-2" name="" id="">
+                <select className="pl-7 text-gray-500 py-2 w-full" name="" id="">
                     <option value="" selected >Choose Tour</option>
                     <option value="Lucca Bike Tour">Lucca Bike Tour</option>
                     <option value="Book a bike ">Book a bike </option>
@@ -39,7 +39,7 @@ const PrivateTourForm = () => {
 
             <div className="md:border-r-2 md:border-t-0 border-t-2 pt-2 md:pt-0 md:pr-4 w-full">
                 <h1 className="flex font-semibold gap-2 items-center "> <img src="https://i.ibb.co.com/1fPJWcg/icon-car.png" alt="" /> Type</h1>
-                <select className="pl-7 text-gray-500 py-2" name="" id="">
+                <select className="pl-7 text-gray-500 py-2 w-full" name="" id="">
                     <option value="" selected >Choose Type</option>
                     <option value="Minivan and Bus">Minivan and Bus</option>
                     <option value="Transfers & NCC">Transfers & NCC</option>
