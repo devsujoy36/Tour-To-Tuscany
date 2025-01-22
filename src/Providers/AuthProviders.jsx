@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react"
 import auth from "../Firebase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
@@ -28,6 +28,9 @@ const AuthProviders = ({ children }) => {
   const loginGoogle = () => {
     return signInWithPopup(auth, googleProvider)
   }
+  const emailVarification = () => {
+    return sendEmailVerification(auth.currentUser)
+  }
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, currentUser => {
@@ -46,7 +49,8 @@ const AuthProviders = ({ children }) => {
     createUser,
     loginUser,
     logoutUser,
-    loginGoogle
+    loginGoogle,
+    emailVarification
   }
 
   return (
