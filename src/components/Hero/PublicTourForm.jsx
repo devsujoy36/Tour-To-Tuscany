@@ -4,7 +4,7 @@ import { useState } from "react";
 const PublicTourForm = () => {
   const [number, setNumber] = useState("");
   const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+  const [time, setTime] = useState("Chose Time");
   const [tour, setTour] = useState("");
   const [transport, setTransport] = useState("");
   

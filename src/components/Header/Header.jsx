@@ -1,11 +1,11 @@
 import { Link, NavLink } from "react-router-dom"
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 const Header = () => {
   const { user, logoutUser } = useContext(AuthContext)
-
+  const menuRef = useRef(null);
   const [navSmToggle, setNavSmToggle] = useState(true)
   const navFlex = "flex flex-col absolute z-50 mx-2 mt-2 top-20 duration-500 right-3 gap-1 border p-3 text-[16px] rounded-lg bg-white"
   const navHide = "flex flex-col absolute z-50 mx-2 mt-2 top-20 duration-500 -right-44 gap-1 border p-3 text-[16px] rounded-lg bg-white"
@@ -17,6 +17,21 @@ const Header = () => {
       setNavSmToggle(true)
     }
   }
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setNavSmToggle(false); // Close the menu if clicked outside
+      }
+    };
+
+    if (navSmToggle) {
+      document.addEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [navSmToggle]);
 
 
 

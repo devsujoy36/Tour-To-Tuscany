@@ -3,10 +3,10 @@ import { useState } from "react";
 
 const PrivateTourForm = () => {
     const [date, setDate] = useState("");
-    const [time, setTime] = useState("");
+    const [time, setTime] = useState("Chose Time");
     const [tour, setTour] = useState("");
     const [transport, setTransport] = useState("");
-    
+
     return (
         <div className="bg-white p-5 rounded-b-2xl  flex md:gap-5 gap-2 flex-col lg:flex-row justify-center items-center md:text-xl text-xs">
 
