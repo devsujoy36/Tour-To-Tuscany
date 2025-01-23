@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
-const ProDetails = ({tour}) => {
+const ProDetails = ({ tour }) => {
     const { name, price, description, img, imgGallery, details, gallery } = tour;
-  const { detailsDescription, numberOfGroup, duration, departuringAndArrivingAreas, guideService, language, entryFees, entryTransportation } = details;
+    const { detailsDescription, numberOfGroup, duration, departuringAndArrivingAreas, guideService, language, entryFees, entryTransportation } = details;
 
     return (
         <div>
@@ -34,25 +34,17 @@ const ProDetails = ({tour}) => {
                 </div>
             </div>
 
-
             {/* Details */}
             <div className="my-16 grid gap-5 md:text-xl">
                 <h1 className="md:text-4xl text-3xl font-bold">Details</h1>
                 <p className="md:w-10/12  ">{detailsDescription}</p>
                 <div className="grid gap-2">
                     <p className="flex items-center gap-2"><img src="https://i.ibb.co.com/CWYDGSC/icon-private-tours.png" alt="" /><span className="font-medium">Number of group:</span> {numberOfGroup}</p>
-
                     <p className="flex items-center gap-2"><img src="https://i.ibb.co.com/pzcM8dk/icon-duration.png" alt="" /><span className="font-medium">Duartion::</span> {duration}</p>
-
                     <p className="flex flex-wrap items-center gap-2"><img src="https://i.ibb.co.com/c8Mc2CZ/akar-icons-location.png" alt="" /><span className="font-medium">Departuring and arriving areas:</span> {departuringAndArrivingAreas}</p>
-
                     <p className="flex items-center gap-2"><img src="https://i.ibb.co.com/R6Bv0sP/icon-guide.png" alt="" /><span className="font-medium">Guide service:</span> {guideService}</p>
-
-
                     <span className="flex items-center gap-2"><img src="https://i.ibb.co.com/r4fJjYw/icon-language.png" alt="" /><span className="font-medium">Language:</span> {language.map((lang, idx) => <p key={idx}>{lang}</p>)}</span>
-
                     <p className="flex items-center gap-2"><img src="https://i.ibb.co.com/Hdxt9NT/icon-ticket.png" alt="" /><span className="font-medium">Entry Fees:</span> {entryFees}</p>
-
                     <p className="flex items-center gap-2"><img src="https://i.ibb.co.com/PFbfB0s/icon-bus.png" alt="" /><span className="font-medium">EntryTransportation:</span> {entryTransportation}</p>
                 </div>
             </div>

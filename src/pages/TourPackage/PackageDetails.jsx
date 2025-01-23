@@ -9,11 +9,10 @@ const PackageDetails = () => {
   const { tours } = useContext(AuthContext);
   const { packageId } = useParams()
   const tour = tours.find(tour => tour.id == packageId);
-  // console.log(tour);
 
   return (
     <div className="min-h-screen max-w-screen-2xl lg:mx-auto mx-10 lg:pt-40 pt-28">
-      
+
       <ProDetails tour={tour} />
 
       {/* Happy Customer says */}

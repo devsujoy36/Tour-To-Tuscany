@@ -59,7 +59,6 @@ const AuthProviders = ({ children }) => {
     }
   }, [])
 
-
   const authInfo = {
     tours,
     user,
@@ -68,7 +67,7 @@ const AuthProviders = ({ children }) => {
     logoutUser,
     loginGoogle,
     emailVarification,
-    
+
   }
 
   return (
