@@ -2,7 +2,7 @@
 
 const WelcomeToOurSite = () => {
   return (
-    <div className="py-10">
+    <div className="md:py-10 md:pb-0 pb-10">
       <div className="max-w-screen-2xl lg:mx-auto mx-10 md:flex justify-between items-center">
 
 

@@ -7,7 +7,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 const OurPackage = () => {
 
   const {tours} = useContext(AuthContext)
-  console.log(tours);
+  // console.log(tours);
 
   return (
     <div className="max-w-screen-2xl lg:mx-auto mx-10 md:py-20 py-10" >

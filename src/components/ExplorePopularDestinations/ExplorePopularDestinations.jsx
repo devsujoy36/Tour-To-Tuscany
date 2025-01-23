@@ -30,12 +30,11 @@ const ExplorePopularDestinations = ({ sectionTitile }) => {
         <div className="">
           <div>
             <Swiper
-              slidesPerView={1}
-              spaceBetween={30}
+              slidesPerView={2}
+              spaceBetween={1}
               freeMode={true}
               autoplay={{
                 delay: 1500,
-                
               }}
               modules={[FreeMode, Autoplay]}
               breakpoints={{
