@@ -1,6 +1,6 @@
 [
   {
-    "id": "lucca_bike-tour",
+    "id": 1,
     "name": "Lucca Bike Tour",
     "price": "$34",
     "day": "EVERY DAY",
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "id": "cinque_terre-tour",
+    "id": 2,
     "name": "Cinque Terre Tour",
     "price": "$24",
     "day": "MONDAY",
@@ -64,7 +64,7 @@
     ]
   },
   {
-    "id": "siena-and-surroundings",
+    "id": 3,
     "name": "Siena and Surroundings",
     "price": "$42",
     "day": "TO BE DECIDED",
@@ -96,7 +96,7 @@
     ]
   },
   {
-    "id": "tour-of-the-lucca-hills",
+    "id": 4,
     "name": "Tour of the Lucca Hills",
     "price": "$23",
     "day": "SUNDAY",
@@ -128,7 +128,7 @@
     ]
   },
   {
-    "id": "Gardaland-Verona",
+    "id": 5,
     "name": "Gardaland, Verona",
     "price": "$35",
     "day": "SUNDAY",
@@ -160,7 +160,7 @@
     ]
   },
   {
-    "id": "cinque_terre-tour",
+    "id": 6,
     "name": "Cinque Terre Tour",
     "price": "$24",
     "day": "MONDAY",
@@ -192,7 +192,7 @@
     ]
   },
   {
-    "id": "siena-and-surroundings",
+    "id": 7,
     "name": "Siena and Surroundings",
     "price": "$42",
     "day": "TO BE DECIDED",
@@ -224,7 +224,7 @@
     ]
   },
   {
-    "id": "tour-of-the-lucca-hills",
+    "id": 8,
     "name": "Tour of the Lucca Hills",
     "price": "$23",
     "day": "SUNDAY",
@@ -254,11 +254,9 @@
       "https://i.ibb.co.com/6XL7xPC/touroftheluccahills-Gallary3.png",
       "https://i.ibb.co.com/V3BDZ2n/touroftheluccahills-Gallary4.png"
     ]
-  },
-  
-  
+  },  
   {
-    "id": "lucca_bike-tour",
+    "id": 9,
     "name": "Lucca Bike Tour",
     "price": "$34",
     "day": "EVERY DAY",
@@ -290,7 +288,7 @@
     ]
   },
   {
-    "id": "cinque_terre-tour",
+    "id": 10,
     "name": "Cinque Terre Tour",
     "price": "$24",
     "day": "MONDAY",
@@ -322,7 +320,7 @@
     ]
   },
   {
-    "id": "siena-and-surroundings",
+    "id": 11,
     "name": "Siena and Surroundings",
     "price": "$42",
     "day": "TO BE DECIDED",
@@ -354,7 +352,7 @@
     ]
   },
   {
-    "id": "tour-of-the-lucca-hills",
+    "id": 12,
     "name": "Tour of the Lucca Hills",
     "price": "$23",
     "day": "SUNDAY",
@@ -386,7 +384,7 @@
     ]
   },
   {
-    "id": "Gardaland-Verona",
+    "id": 13,
     "name": "Gardaland, Verona",
     "price": "$35",
     "day": "SUNDAY",
@@ -418,7 +416,7 @@
     ]
   },
   {
-    "id": "cinque_terre-tour",
+    "id": 14,
     "name": "Cinque Terre Tour",
     "price": "$24",
     "day": "MONDAY",
@@ -450,7 +448,7 @@
     ]
   },
   {
-    "id": "siena-and-surroundings",
+    "id": 15,
     "name": "Siena and Surroundings",
     "price": "$42",
     "day": "TO BE DECIDED",
@@ -482,7 +480,7 @@
     ]
   },
   {
-    "id": "tour-of-the-lucca-hills",
+    "id": 16,
     "name": "Tour of the Lucca Hills",
     "price": "$23",
     "day": "SUNDAY",

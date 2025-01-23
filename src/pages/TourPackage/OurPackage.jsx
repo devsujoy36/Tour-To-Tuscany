@@ -1,25 +1,13 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react"
+import { useContext, } from "react"
 import Product from "../../components/ExplorePopularDestinations/Product";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 
 const OurPackage = () => {
 
-  const [tours, setTours] = useState([]);
-
-  useEffect(() => {
-    fetch("/tourPackages.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((jsonData) => setTours(jsonData))
-      .catch((error) => console.error("Error fetching JSON:", error));
-  }, []);
-
-  // console.log(tours);
+  const {tours} = useContext(AuthContext)
+  console.log(tours);
 
   return (
     <div className="max-w-screen-2xl lg:mx-auto mx-10 md:py-20 py-10" >

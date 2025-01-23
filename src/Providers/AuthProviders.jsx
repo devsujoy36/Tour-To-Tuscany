@@ -8,6 +8,22 @@ import { GoogleAuthProvider } from "firebase/auth";
 export const AuthContext = createContext(null)
 
 const AuthProviders = ({ children }) => {
+
+  const [tours, setTours] = useState([]);
+
+  useEffect(() => {
+    fetch("/tourPackages.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((jsonData) => setTours(jsonData))
+      .catch((error) => console.error("Error fetching JSON:", error));
+  }, []);
+
+
   const googleProvider = new GoogleAuthProvider();
   const [user, setUser] = useState(null);
   // create user
@@ -45,6 +61,7 @@ const AuthProviders = ({ children }) => {
 
 
   const authInfo = {
+    tours,
     user,
     createUser,
     loginUser,

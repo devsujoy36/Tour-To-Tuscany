@@ -43,8 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/tourpackages/:packageId",
-        element: <PackageDetails />,
-        loader: () => fetch("../tourPackages.json")
+        element: <PackageDetails />
       },
       {
         path: "/contactus",
