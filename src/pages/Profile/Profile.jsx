@@ -6,7 +6,7 @@ import blankProfile from '../../../public/assets/blankProfile.png'
 import { useNavigate } from "react-router-dom"
 
 const Profile = () => {
-  const { user } = useContext(AuthContext)
+  const { user, deleteAccount } = useContext(AuthContext)
   const [profileError, setProfileError] = useState()
   const [success, setSuccess] = useState()
   const [updateForm, setUpdateForm] = useState(false)
@@ -30,6 +30,18 @@ const Profile = () => {
         setProfileError(error.message);
       });
 
+  }
+
+  const handleDeleteUser = () =>{
+    deleteAccount()
+    .then(() => {
+      console.log('Account Delete');
+      setSuccess('Account Delete');
+    })
+    .catch((error) => {
+      console.log(error.message);
+      setProfileError(error.message);
+    });
   }
 
 
@@ -60,13 +72,15 @@ const Profile = () => {
                   :
                   <div className="flex items-center justify-center gap-2">
                     <span className="text-red-500 font-medium">Not Varified</span>
-                    <button onClick={() => {navigate('/checkyourmail')}} className="bg-red-500 font-medium md:px-4 px-2 md:py-1 md:hover:px-8 border-2 border-transparent hover:border-red-600 hover:text-red-500 active:scale-95 hover:bg-transparent transition-all rounded-full md:text-xl text-white ">Varify now</button>
+                    <button onClick={() => { navigate('/checkyourmail') }} className="bg-red-500 font-medium md:px-4 px-2 md:py-1 md:hover:px-8 border-2 border-transparent hover:border-red-600 hover:text-red-500 active:scale-95 hover:bg-transparent transition-all rounded-full md:text-xl text-white ">Varify now</button>
                   </div>
                 }
               </h1>
               <h1><span className="font-medium">Creation Time: </span>{user?.metadata.creationTime}</h1>
               <h1><span className="font-medium">Last Sign in Time: </span>{user?.metadata.lastSignInTime}</h1>
-
+              <div>
+                <button className="border-2 md:px-4 px-2 rounded-full cursor-pointer text-white bg-red-500 md:py-2 py-1 md:text-xl mt-3 active:scale-95 hover:bg-transparent hover:text-orange-500 transition-all" onClick={handleDeleteUser}>Delete Account</button>
+              </div>
             </div>
           </div>
 
