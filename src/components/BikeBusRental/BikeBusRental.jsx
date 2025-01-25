@@ -36,11 +36,9 @@ const BikeBusRental = () => {
                             <h1 className="text-2xl my-5 font-bold">{bikebus.name}</h1>
                             <h1>{bikebus.description}</h1>
                         </div>
-
                     </div>
                 ))}
             </div>
-
         </div>
     )
 }
