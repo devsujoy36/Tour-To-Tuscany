@@ -4,13 +4,9 @@ import { createUserWithEmailAndPassword, deleteUser, onAuthStateChanged, sendEma
 import { createContext, useEffect, useState } from "react"
 import auth from "../Firebase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
-
 export const AuthContext = createContext(null)
-
 const AuthProviders = ({ children }) => {
-
   const [tours, setTours] = useState([]);
-
   useEffect(() => {
     fetch("/tourPackages.json")
       .then((response) => {
@@ -22,25 +18,20 @@ const AuthProviders = ({ children }) => {
       .then((jsonData) => setTours(jsonData))
       .catch((error) => console.error("Error fetching JSON:", error));
   }, []);
-
-
   const googleProvider = new GoogleAuthProvider();
   const [user, setUser] = useState(null);
   // create user
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password)
   }
-
   // login user
   const loginUser = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password)
   }
-
   // logoutuser
   const logoutUser = () => {
     return signOut(auth)
   }
-
   const loginGoogle = () => {
     return signInWithPopup(auth, googleProvider)
   }
@@ -50,7 +41,6 @@ const AuthProviders = ({ children }) => {
   const deleteAccount = () => {
     return deleteUser(user)
   }
-
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, currentUser => {
       console.log("Current value of user: ", currentUser);
