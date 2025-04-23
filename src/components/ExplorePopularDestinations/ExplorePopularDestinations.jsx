@@ -44,11 +44,11 @@ const ExplorePopularDestinations = ({ sectionTitile }) => {
                 },
                 768: {
                   slidesPerView: 2,
-                  spaceBetween: 40,
+                  spaceBetween: 35,
                 },
                 1024: {
                   slidesPerView: 4,
-                  spaceBetween: 50,
+                  spaceBetween: 40,
                 },
               }}
               className="mySwiper"
